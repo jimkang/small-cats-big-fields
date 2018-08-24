@@ -15,7 +15,6 @@ var routeState = RouteState({
 
 function followRoute(routeDict) {
   catFieldFlow({
-    useExtraParts: routeDict.useExtraParts
   });
   renderControls({ onRoll, hideControls: routeDict.hideControls });
 }
