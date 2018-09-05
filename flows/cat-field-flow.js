@@ -17,14 +17,14 @@ var fieldsTable = probable.createTableFromSizes([
 function catFieldFlow() {
   var figures = figureTable.roll();
   //var fieldTypes = fieldsTable.roll();
-  var fields = ['solid'].map(fieldForType);
+  var fields = ['solid', 'solid'].map(fieldForType);
   // todo: Fix probable's issues with returning single-element arrays.
   renderCatField({ figures: [figures], fields });
 }
 
-function fieldForType(fieldType) {
+function fieldForType(fieldType, i) {
   if (fieldType === 'solid') {
-    return { width: boardWidth, height: boardHeight, color: '#fd5' };
+    return { x: i * boardWidth/2, width: boardWidth/2, height: boardHeight, color: `hsl(${probable.roll(360)}, 50%, 50%)` };
   }
 }
 
