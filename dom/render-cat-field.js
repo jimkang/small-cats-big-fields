@@ -23,7 +23,7 @@ function renderCatField({ figures, fields }) {
   fieldEls.enter().append('rect').classed('field', true)
     .merge(fieldEls)
     .attr('fill', accessor('color'))
-    .attr('x', 0)
+    .attr('x', accessor('x'))
     .attr('y', 0)
     .attr('width', accessor('width'))
     .attr('height', accessor('height'));
